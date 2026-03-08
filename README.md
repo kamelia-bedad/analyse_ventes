@@ -18,7 +18,7 @@ Il permet de calculer le chiffre d'affaires, d'analyser les ventes par produit e
 
 2.  Analyse statistique :  
   - Chiffre d'affaires total  
-  - Revenu par produit  
+  - Revenu pa produit  
   - Revenu par mois  
 
 3. Visualisations :  
@@ -27,6 +27,6 @@ Il permet de calculer le chiffre d'affaires, d'analyser les ventes par produit e
   - Courbe d'evolut   du revenu par mois  
 
 4. Interface interactive :  
-  - Permet de filtrer les ventes pour un produit spécifique et d'afficher ses ventes détaillées avec un graphique.
+  - Permet de filtrer les ventes pour un produit spécifique et d'afficher ses ventes détaillées avec un graph.
 
 
