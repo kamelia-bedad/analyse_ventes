@@ -4,10 +4,10 @@ import seaborn as sns
 import sys
 
 
-# Charger les donnees
+# Chargement les donnees
 data = pd.read_csv(r"C:\Users\kamel\OneDrive\Documents\Cours\analyse_ventes\data\ventes.csv")
 
-# Nettoyer les donneess 
+# nettoyer les donneess 
 data["date"] = pd.to_datetime(data["date"])
 data["revenu"] = data["prix"] * data["quantite"]
 data["mois"] = data["date"].dt.to_period("M")  #mois
@@ -34,7 +34,7 @@ plt.ylabel("Revenu")
 plt.tight_layout()
 plt.show()
 
-# camember du revenu par produit
+# camembert du revenu par produit
 plt.figure(figsize=(6,6))
 plt.pie(ventes_produit.values, labels=ventes_produit.index, autopct="%1.1f%%", startangle=140)
 plt.title("Répartition du revenu par produit")
@@ -55,7 +55,7 @@ if produit_choisi:
     if produit_choisi in data["produit"].unique():
         detail_produit = data[data["produit"] == produit_choisi]
         print(f"\nVentes détaillées pour {produit_choisi} :\n", detail_produit)
-        # Graphique du produit choisi
+        # Graph du produit choisi
         ventes_par_date = detail_produit.groupby("date")["revenu"].sum()
         plt.figure(figsize=(6,4))
         sns.lineplot(x=ventes_par_date.index, y=ventes_par_date.values, marker="o")
